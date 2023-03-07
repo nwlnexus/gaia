@@ -8,6 +8,7 @@ authors = ["NWLNEXUS LLC  <support@nwlnexus.net>"]
 
 [[bin]]
 name = "hermesd"
+path = "src/bin/hermesd.rs"
 
 
 [package.metadata.deb]
