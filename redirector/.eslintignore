@@ -1,0 +1,10 @@
+/.cache
+/.github
+/build
+/public/build/
+node_modules
+**/*.ignore.*
+coverage
+*.ignored/
+*.ignored.*
+app/remix.ts

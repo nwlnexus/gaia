@@ -1,0 +1,28 @@
+name = "redirector"
+main = "src/index.ts"
+compatibility_date = "2023-02-28"
+
+[[ kv_namespaces ]]
+binding = "GAIA_KV"
+id = "8fbe9fff17254ac59f40ef3197a9a9e2"
+preview_id = "f2332829bc694ccfb9fa945c52eba221"
+
+[[ d1_databases ]]
+binding = "GAIA_DB"
+database_name = "gaia"
+database_id = "03879bf7-ef94-40de-a191-79fc50d283e8"
+preview_database_id = "e00d1e6c-1e32-473e-812e-ba5c8c3125fc"
+
+[[queues.producers]]
+queue = "gaia"
+binding = "GAIA_QUEUE"
+
+[[queues.consumers]]
+queue = "gaia"
+max_batch_size = 10
+max_batch_timeout = 30
+max_retries = 10
+dead_letter_queue = "gaia"
+
+[triggers]
+crons = ["0 0 * * *"]
