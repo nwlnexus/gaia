@@ -17,11 +17,25 @@ describe('Worker', () => {
     await worker.stop();
   });
 
-  it('should return HTML on the root', async () => {
+  it('should return plain text on the root', async () => {
     const resp = await worker.fetch('/');
     if (resp) {
       const contentType = resp.headers.get('content-type');
       expect(contentType).toBe('text/plain;charset=UTF-8');
+    }
+  });
+  it('should return JSON on the /:serial path', async () => {
+    const resp = await worker.fetch('/serial');
+    if (resp) {
+      const contentType = resp.headers.get('content-type');
+      expect(contentType).toBe('application/json; charset=UTF-8');
+    }
+  });
+  it('should return JSON on the /:something_else path', async () => {
+    const resp = await worker.fetch('/something');
+    if (resp) {
+      const contentType = resp.headers.get('content-type');
+      expect(contentType).toBe('application/json; charset=UTF-8');
     }
   });
 });

@@ -1,10 +1,10 @@
 {
-  "name": "kronos",
+  "name": "redirector",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "deploy": "wrangler publish",
-    "start": "wrangler dev",
+    "start": "export NO_D1_WARNING=true && wrangler dev --local",
     "test": "vitest"
   },
   "dependencies": {
@@ -12,8 +12,22 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20221111.1",
+    "@databases/split-sql-query": "^1.0.3",
+    "@databases/sql": "^3.2.0",
+    "@miniflare/tre": "^3.0.0-next.1",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "better-sqlite3": "^8.1.0",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-vitest": "^0.0.54",
+    "prettier": "^2.8.4",
     "typescript": "^4.9.4",
     "vitest": "^0.28.3",
     "wrangler": "^2.9.1"
+  },
+  "packageManager": "yarn@1.19.1",
+  "engines": {
+    "node": ">=16.13"
   }
 }

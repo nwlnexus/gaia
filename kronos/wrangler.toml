@@ -22,7 +22,8 @@ queue = "gaia"
 max_batch_size = 10
 max_batch_timeout = 30
 max_retries = 10
-dead_letter_queue = "gaia"
+dead_letter_queue = "gaia_dlq"
 
-[triggers]
-crons = ["0 0 * * *"]
+[dev]
+persist = true
+port = 8790
