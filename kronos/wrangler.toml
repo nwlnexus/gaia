@@ -1,4 +1,4 @@
-name = "redirector"
+name = "kronos"
 main = "src/index.ts"
 compatibility_date = "2023-02-28"
 
@@ -25,5 +25,4 @@ max_retries = 10
 dead_letter_queue = "gaia_dlq"
 
 [dev]
-persist = true
 port = 8790

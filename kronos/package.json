@@ -1,10 +1,11 @@
 {
-  "name": "redirector",
+  "name": "kronos",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "deploy": "wrangler publish",
-    "start": "export NO_D1_WARNING=true && wrangler dev --local",
+    "start": "export NO_D1_WARNING=true && wrangler dev",
+    "dev": "export NO_D1_WARNING=true && wrangler dev --local --persist --persist-to=../.wrangler",
     "test": "vitest"
   },
   "dependencies": {

@@ -25,14 +25,14 @@ describe('Worker', () => {
     }
   });
   it('should return JSON on the /:serial path', async () => {
-    const resp = await worker.fetch('/serial');
+    const resp = await worker.fetch('/s/serial');
     if (resp) {
       const contentType = resp.headers.get('content-type');
       expect(contentType).toBe('application/json; charset=UTF-8');
     }
   });
   it('should return JSON on the /:something_else path', async () => {
-    const resp = await worker.fetch('/something');
+    const resp = await worker.fetch('/s/something');
     if (resp) {
       const contentType = resp.headers.get('content-type');
       expect(contentType).toBe('application/json; charset=UTF-8');

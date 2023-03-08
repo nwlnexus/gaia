@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Executing migrations. This will remove all data on dev dbs. Continue? [y,n]"
+read -r input
+
+if [ "$input" == "" ]; then
+   exit 0
+elif [[ "$input" == "y" ]]; then
+  npx wrangler --persist-to "../.wrangler" d1 execute GAIA_DB --file ../migrations/00_drop_tables.sql --local
+  npx wrangler --persist-to "../.wrangler" d1 execute GAIA_DB --file ../migrations/01_create_accounts.sql --local
+  npx wrangler --persist-to "../.wrangler" d1 execute GAIA_DB --file ../migrations/02_create_locations.sql --local
+  npx wrangler --persist-to "../.wrangler" d1 execute GAIA_DB --file ../migrations/03_create_nodes.sql --local
+else
+   exit 0
+fi
