@@ -1,6 +1,5 @@
 # Gaia
 
----
 
 This repository contains all the code related to this system of applications
 that work together to provide managment and monitoring of deployed edge devices.
@@ -18,10 +17,8 @@ Cloudflare Worker that will serve as the primary endpoint that hermesd clients w
 Pages app that compiles all the information from various endpoints and systems to once concise view.
 
 
----
 
 ## Setup
 
----
 
 ## TLDR
