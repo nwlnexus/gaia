@@ -6,7 +6,8 @@
     "deploy": "wrangler publish",
     "start": "export NO_D1_WARNING=true && wrangler dev",
     "dev": "export NO_D1_WARNING=true && wrangler dev --local --persist --persist-to=../.wrangler",
-    "test": "vitest"
+    "test:unit": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "hono": "^2.7.1"
@@ -18,13 +19,15 @@
     "@miniflare/tre": "^3.0.0-next.1",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "@vitest/coverage-c8": "^0.29.2",
+    "@vitest/ui": "^0.29.2",
     "better-sqlite3": "^8.1.0",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-vitest": "^0.0.54",
     "prettier": "^2.8.4",
     "typescript": "^4.9.4",
-    "vitest": "^0.28.3",
+    "vitest": "^0.29.2",
     "wrangler": "^2.9.1"
   },
   "packageManager": "yarn@1.19.1",

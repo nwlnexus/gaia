@@ -9,11 +9,14 @@ export default defineConfig({
         }
     },
     test: {
+        root: 'src',
         include: ['./**/*.{spec.ts,spec.js,test.ts,test.js}'],
         exclude: ['**/node_modules/**', '**/dist/**'],
         coverage: {
-            provider: 'c8',
-            exclude: ['node_modules/']
+            provider: "c8",
+            exclude: ['node_modules'],
+            reporter: ['html'],
+            reportsDirectory: 'coverage'
         },
         // environment: 'miniflare',
         // environmentOptions: {

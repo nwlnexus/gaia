@@ -2,6 +2,7 @@ name = "kronos"
 main = "src/index.ts"
 compatibility_date = "2023-02-28"
 
+
 [[ kv_namespaces ]]
 binding = "GAIA_KV"
 id = "8fbe9fff17254ac59f40ef3197a9a9e2"
@@ -12,6 +13,8 @@ binding = "GAIA_DB"
 database_name = "gaia"
 database_id = "03879bf7-ef94-40de-a191-79fc50d283e8"
 preview_database_id = "e00d1e6c-1e32-473e-812e-ba5c8c3125fc"
+migrations_table = "gaia_migrations"
+migrations_dir = "../migrations"
 
 [[queues.producers]]
 queue = "gaia"
