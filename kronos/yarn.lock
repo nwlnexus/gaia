@@ -383,7 +383,7 @@
     undici "5.20.0"
     urlpattern-polyfill "^4.0.3"
 
-"@miniflare/d1@2.12.1":
+"@miniflare/d1@2.12.1", "@miniflare/d1@^2.12.1":
   version "2.12.1"
   resolved "https://registry.yarnpkg.com/@miniflare/d1/-/d1-2.12.1.tgz#2a65b540d4b2834ddc6b0603425627841803081d"
   integrity sha512-2ldT7xEC7KxoaEJ7nCY9/AB/xwPjbm3mrmpiIspT0b5OgS640Pe9EU4c5bSmzGoUbLvwF+jb+LhLE1QaEbWkBw==
@@ -463,7 +463,26 @@
     "@miniflare/shared" "2.12.1"
     cron-schedule "^3.0.4"
 
-"@miniflare/shared@2.12.1":
+"@miniflare/shared-test-environment@2.12.1":
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/@miniflare/shared-test-environment/-/shared-test-environment-2.12.1.tgz#d84e48c3238aa2e13b953ee0aac0df34abcf4348"
+  integrity sha512-9ZxtvzxK7jBNdzAOYhvjjvTk7tXgJyJNZF7HVvFlNuJ/bZXs3siiu2C5u2XqFc0YW+zWSwY+YxYEwa+xIOprSw==
+  dependencies:
+    "@cloudflare/workers-types" "^4.20221111.1"
+    "@miniflare/cache" "2.12.1"
+    "@miniflare/core" "2.12.1"
+    "@miniflare/d1" "2.12.1"
+    "@miniflare/durable-objects" "2.12.1"
+    "@miniflare/html-rewriter" "2.12.1"
+    "@miniflare/kv" "2.12.1"
+    "@miniflare/queues" "2.12.1"
+    "@miniflare/r2" "2.12.1"
+    "@miniflare/shared" "2.12.1"
+    "@miniflare/sites" "2.12.1"
+    "@miniflare/storage-memory" "2.12.1"
+    "@miniflare/web-sockets" "2.12.1"
+
+"@miniflare/shared@2.12.1", "@miniflare/shared@^2.12.1":
   version "2.12.1"
   resolved "https://registry.yarnpkg.com/@miniflare/shared/-/shared-2.12.1.tgz#11f6c40bdc289662c4ac40feb1aba226c6fb45d4"
   integrity sha512-N8sHNM5vcvjvO+znQ7Mbqf0FChRlWxy/svUpQf1GGpii9aTXzOTWB+WkFvJrJNx44SUReEGxUAzxpdeWnHahmA==
@@ -1041,6 +1060,11 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
+
+d1-orm@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/d1-orm/-/d1-orm-0.7.2.tgz#aaad9a94d49fe6f6ee0bc0aa85267cc8942187ff"
+  integrity sha512-s0s/RudLe7/BspbUf7ZwKe+0Eov5fFt0WVPVWdphx6kAWDMj0OTy9KaWockTOMVoI4XPGypiZ/wxK0kb+KVmSg==
 
 debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
@@ -2612,6 +2636,17 @@ vite-node@0.29.2:
     rollup "^3.10.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+vitest-environment-miniflare@^2.12.1:
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/vitest-environment-miniflare/-/vitest-environment-miniflare-2.12.1.tgz#dea44352453209d4f3c1b1d843b5410812d0b008"
+  integrity sha512-02P8HRoKK7FvbuuruYgcONMm83FK2gQxwZ4nCh4vM0hPsIFNLVgpIIs5THC9MYXmWkM7KGrdWcGYD5zdvzBFnw==
+  dependencies:
+    "@miniflare/queues" "2.12.1"
+    "@miniflare/runner-vm" "2.12.1"
+    "@miniflare/shared" "2.12.1"
+    "@miniflare/shared-test-environment" "2.12.1"
+    undici "5.20.0"
 
 vitest@^0.29.2:
   version "0.29.2"

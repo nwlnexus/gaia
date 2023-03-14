@@ -18,11 +18,11 @@ export default defineConfig({
             reporter: ['html'],
             reportsDirectory: 'coverage'
         },
-        // environment: 'miniflare',
-        // environmentOptions: {
-        //     modules: true,
-        //     scriptPath: './dist/index.mjs'
-        // },
+        environment: 'miniflare',
+        environmentOptions: {
+            modules: true,
+            scriptPath: './src/index.ts'
+        },
         passWithNoTests: true
     }
 });

@@ -25,6 +25,7 @@ describe('Worker', () => {
     }
   });
   it('should return JSON on the /:serial path', async () => {
+
     const resp = await worker.fetch('/s/serial');
     if (resp) {
       const contentType = resp.headers.get('content-type');
